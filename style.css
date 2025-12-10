@@ -1,0 +1,241 @@
+/* --- Global Styles & Reset --- */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f0f0f0;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    color: #4A2C1D;
+}
+
+/* --- Navigasi --- */
+.header {
+    padding: 15px 20px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+}
+.btn {
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: bold;
+}
+.btn-primary {
+    background-color: #4A2C1D; /* Coklat Tua */
+    color: white;
+}
+.btn-success {
+    background-color: #28a745; /* Hijau */
+    color: white;
+}
+/* --- Halaman Depan (index.php) --- */
+.hero {
+    background-color: #4A2C1D;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.hero h1 {
+    color: white;
+    font-size: 2.5em;
+}
+.menu-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.menu-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px; /* Jarak antar kartu */
+    padding: 0 20px 40px;
+}
+.menu-card {
+    width: 300px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+    transition: transform 0.2s;
+}
+.menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.menu-card img {
+    /* PENTING: Gaya untuk menampilkan gambar menu */
+    width: 100%;
+    height: 200px;
+    object-fit: cover; 
+    border-bottom: 3px solid #E5B263; /* Garis pemisah */
+}
+.menu-info {
+    padding: 15px;
+    text-align: center;
+    /* PENYESUAIAN PENTING: Untuk tata letak vertikal */
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+}
+.menu-card h3 {
+    font-size: 1.4em;
+    color: #4A2C1D;
+    margin-bottom: 5px;
+}
+.menu-card p {
+    font-size: 0.9em;
+    color: #666;
+    min-height: 40px;
+    flex-grow: 1; /* Memastikan paragraf (deskripsi) menggunakan ruang yang ada */
+}
+.menu-card .price {
+    font-weight: bold;
+    color: #E5B263; /* Kuning Emas */
+    font-size: 1.4em;
+    margin-top: 10px;
+    display: block;
+}
+
+/* --- Halaman Admin (admin.php) --- */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+/* Tambahan gaya untuk admin */
+.btn-warning {
+    background-color: #ffc107;
+    color: #333;
+}
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+table, th, td { border: 1px solid #ddd; }
+th, td { padding: 12px; text-align: left; }
+th { background-color: #E5B263; color: #4A2C1D; }
+/* Form Styles */
+.form-group { margin-bottom: 15px; }
+.form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+/* --- Gaya Notifikasi / Toast Message --- */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 8px;
+    color: white;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+.notification.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.notification.success {
+    background-color: #4CAF50; /* Hijau */
+}
+
+.notification.error {
+    background-color: #f44336; /* Merah */
+}
+
+.notification.info {
+    background-color: #2196F3; /* Biru */
+}
+
+/* ------------------------------------------- */
+/* --- GAYA BARU UNTUK FITUR PESAN (WhatsApp) --- */
+/* ------------------------------------------- */
+
+.btn-whatsapp {
+    /* Warna khas WhatsApp */
+    background-color: #25D366; 
+    color: white !important;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 15px; 
+    display: inline-block; 
+    transition: background-color 0.2s;
+    width: 80%; 
+    text-align: center;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1DA851; 
+}
+
+/* ------------------------------------------- */
+/* --- GAYA FOOTER (UNTUK ALAMAT) - Estetik Baru --- */
+/* ------------------------------------------- */
+.footer-sasirangan {
+    background-color: #4A2C1D; /* Coklat Tua */
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 40px; 
+}
+
+.footer-sasirangan p, .footer-sasirangan h4 {
+    margin: 5px 0;
+}
+
+.footer-alamat {
+    margin-bottom: 20px;
+    padding: 15px 10px; /* Menambah padding dan membuatnya lebih tebal */
+    
+    /* Sentuhan Estetika Utama */
+    border-top: 2px solid #E5B263; /* Garis atas Kuning Emas */
+    border-bottom: 2px solid #E5B263; /* Garis bawah Kuning Emas */
+    background-color: #5C3A2C; /* Warna latar belakang sedikit berbeda dari footer utama */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Bayangan lembut */
+    
+    max-width: 450px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-alamat h4 {
+    font-family: 'Playfair Display', serif; /* Font yang sama dengan judul */
+    font-size: 1.4em; 
+    color: #E5B263; /* Kuning Emas */
+    margin-bottom: 10px;
+    letter-spacing: 1px; 
+    text-transform: uppercase;
+}
+
+.footer-alamat p {
+    font-size: 1em;
+    line-height: 1.6; 
+    color: #F0F0F0; /* Sedikit lebih terang dari teks putih biasa */
+    font-weight: 300; 
+}
